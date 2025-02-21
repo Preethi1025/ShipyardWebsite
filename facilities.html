@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipyard Facilities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #0a2a5a;
+            color: white;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 1100px;
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #0a2a5a;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .facility {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .facility:hover {
+            transform: scale(1.03);
+        }
+        .facility img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .facility .text {
+            flex: 1;
+            text-align: left;
+        }
+        .facility h3 {
+            font-size: 18px;
+            color: #0a2a5a;
+            margin-bottom: 5px;
+        }
+        .facility p {
+            font-size: 14px;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .facility {
+                flex-direction: column;
+                text-align: center;
+            }
+            .facility img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Common Shipyard Facilities</h2>
+        
+        <div class="grid">
+            <!-- Facility 1 -->
+            <div class="facility">
+                <img src="dry_dock.jpg" alt="Dry Dock">
+                <div class="text">
+                    <h3>Dry Dock</h3>
+                    <p>Used for ship repairs and maintenance.</p>
+                </div>
+            </div>
+
+            <!-- Facility 2 -->
+            <div class="facility">
+                <img src="shipbuilding.jpg" alt="Shipbuilding Area">
+                <div class="text">
+                    <h3>Shipbuilding Area</h3>
+                    <p>Construction and assembly of new ships.</p>
+                </div>
+            </div>
+
+            <!-- Facility 3 -->
+            <div class="facility">
+                <img src="storage.jpg" alt="Storage Facility">
+                <div class="text">
+                    <h3>Storage Facility</h3>
+                    <p>Warehousing of ship components and tools.</p>
+                </div>
+            </div>
+
+            <!-- Facility 4 -->
+            <div class="facility">
+                <img src="crane.jpg" alt="Heavy Cranes">
+                <div class="text">
+                    <h3>Heavy Cranes</h3>
+                    <p>Used for lifting heavy ship components.</p>
+                </div>
+            </div>
+
+            <!-- Facility 5 -->
+            <div class="facility">
+                <img src="painting.jpg" alt="Painting & Coating">
+                <div class="text">
+                    <h3>Painting & Coating</h3>
+                    <p>Corrosion protection for ship surfaces.</p>
+                </div>
+            </div>
+
+            <!-- Facility 6 -->
+            <div class="facility">
+                <img src="testing.jpg" alt="Testing Area">
+                <div class="text">
+                    <h3>Testing & Inspection</h3>
+                    <p>Ensuring safety and compliance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

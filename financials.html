@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Financial Reports</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #0a2a5a;
+            color: white;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 30px;
+            max-width: 1100px;
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .description {
+            text-align: left;
+            padding: 20px;
+        }
+        .description h2 {
+            color: #0a2a5a;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .description p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .report-container {
+            text-align: center;
+        }
+        .report {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .report p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: center;
+        }
+        canvas {
+            max-width: 300px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Stack on smaller screens */
+                text-align: center;
+            }
+            .description {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side: Description -->
+        <div class="description">
+            <h2>Ship Financial Overview</h2>
+            <p>
+                The financial report provides an overview of the ship’s revenue, expenses, and net profit. 
+                This report ensures transparency in operations and helps in better decision-making.
+                Key areas include operating costs, fuel expenses, maintenance, and other expenditures. 
+                Below is a breakdown of the financial statistics.
+            </p>
+        </div>
+
+        <!-- Right Side: Financial Report -->
+        <div class="report-container">
+            <h2>Ship Financial Report</h2>
+            
+            <!-- Financial Report Section -->
+            <div class="report">
+                <p><strong>Total Revenue:</strong> $5,000,000</p>
+                <p><strong>Operating Costs:</strong> $2,000,000</p>
+                <p><strong>Fuel Expenses:</strong> $800,000</p>
+                <p><strong>Maintenance Costs:</strong> $500,000</p>
+                <p><strong>Miscellaneous Expenses:</strong> $300,000</p>
+                <p><strong>Net Profit:</strong> $1,400,000</p>
+            </div>
+
+            <!-- Pie Chart Section -->
+            <div class="chart-container">
+                <canvas id="financialChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Pie chart data
+        const data = {
+            labels: ["Operating Costs", "Fuel Expenses", "Maintenance", "Miscellaneous", "Net Profit"],
+            datasets: [{
+                data: [2000000, 800000, 500000, 300000, 1400000],
+                backgroundColor: ["#ffcc00", "#ff5733", "#33ff57", "#3380ff", "#9b33ff"]
+            }]
+        };
+
+        // Render chart
+        const ctx = document.getElementById("financialChart").getContext("2d");
+        new Chart(ctx, {
+            type: "pie",
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "bottom"
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Marine Engineering</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #0a2a5a;
+            color: white;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            max-width: 1100px;
+            gap: 50px;
+            align-items: center;
+        }
+        .team-info {
+            flex: 1;
+        }
+        .team-info h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .team-info p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        .team-info .btn {
+            background: white;
+            color: #0a2a5a;
+            padding: 10px 20px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .team-card {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 220px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .team-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+        .team-card h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .team-card p {
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+        .team-card .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .team-card .social-icons a {
+            color: #0a2a5a;
+            font-size: 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side: "Our Team" Info -->
+        <div class="team-info">
+            <h2>Our Team</h2>
+            <p>Meet our highly experienced Marine Engineering faculty and trainers at the shipyard, dedicated to excellence.</p>
+            <a href="#" class="btn">Contact Us</a>
+        </div>
+
+        <!-- Right Side: Team Cards -->
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="trainer1.jpg" alt="Trainer 1">
+                <h3>Alex Richmond</h3>
+                <p>Developer</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="trainer2.jpg" alt="Trainer 2">
+                <h3>Jeffrey Brown</h3>
+                <p>Creative Lead</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="trainer3.jpg" alt="Trainer 3">
+                <h3>Connor Quinn</h3>
+                <p>Designer</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="trainer4.jpg" alt="Trainer 4">
+                <h3>Ann Smith</h3>
+                <p>Manager</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

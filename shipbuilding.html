@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipyard Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            border-radius: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 30px auto;
+            max-width: 1000px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .description {
+            width: 50%;
+            padding: 20px;
+        }
+        .order-form-container {
+            width: 45%;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .order-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input, select {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .order-now {
+            background: #007BFF;
+            color: white;
+        }
+        .order-now:hover {
+            background: #0056b3;
+        }
+        .back-home {
+            background: #555;
+            color: white;
+            text-align: center;
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .back-home:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Shipyard Services</h1>
+        <p>Explore our diverse services and products to find the perfect solutions for your needs.</p>
+    </header>
+
+    <div class="container">
+        <!-- Left Side: Description -->
+        <div class="description">
+            <h2>Shipbuilding is an intricate and highly specialized industry that involves designing, constructing, and launching various types of vessels to meet global maritime needs.</h2>
+            <h3>Our Expertise:</h3>
+            <ul>
+                <h3>Custom Ship Design & Construction – Tailored vessels designed to meet your specific requirements.</h3>
+                <h3> Advanced Shipbuilding Technologies – Incorporating AI, automation, and digital twin modeling.</h3>
+                <h3>High-Quality Materials & Engineering – Utilizing marine-grade steel, alloys, and composite materials.</h3>
+                <h3>Sustainable & Eco-Friendly Solutions – Implementing green shipbuilding techniques to reduce emissions.</h3>
+                <h3>Testing & Certification – Ensuring compliance with international maritime regulations.</h3>
+            </ul>
+            <h3>Types of Ships We Build:</h3>
+            <ul>
+                <li>🚢 Cargo Ships – Efficient transportation for goods across global trade routes.</li>
+                <li>🛢️ Oil & Gas Tankers – Safe and secure transport of petroleum and chemicals.</li>
+                <li>📦 Container Ships – High-capacity vessels for seamless logistics operations.</li>
+                <li>⚓ Naval & Defense Ships – Engineered for security, patrol, and military applications.</li>
+                <li>🛳️ Passenger Ships & Luxury Yachts – Modern cruise liners and high-end leisure vessels.</li>
+            </ul>
+        </div>
+
+        <!-- Right Side: Image + Order Form -->
+        <div class="order-form-container">
+            <!-- Image Section -->
+            <img src="shipbuilding.jpg" alt="Shipyard Image" class="order-image">
+
+            <!-- Order Form -->
+            <h2>Order Your Ship</h2>
+            <form id="shipOrderForm">
+                <label for="budget">Budget/Amount:</label>
+                <input type="number" id="budget" required>
+
+                <label for="technology">Preferred Technology:</label>
+                <input type="text" id="technology" required>
+
+                <label for="shipType">Ship Type:</label>
+                <select id="shipType">
+                    <option>Oil</option>
+                    <option>Cargo</option>
+                    <option>Container</option>
+                </select>
+
+                <button type="submit" class="order-now">Order Now</button>
+            </form>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-home">Back to Home</a>
+
+</body>
+</html>
